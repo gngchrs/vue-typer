@@ -21,6 +21,14 @@
       color: #f00;
       font-size: 22px;
     }
+
+    .timer {
+      font-size: 100px;
+      text-align: center;
+      color: white;
+      border-radius: 100;
+      background-color: green;
+    }
   </style>
   <title>Vue Typer</title>
 </head>
@@ -41,6 +49,20 @@
                     rows="10"
                     placeholder="start typing here"
                     v-model="typedText"></textarea>
+        </div>
+      </div>
+      <div class="col-4">
+        <button class="btn btn-primary btn-block"
+                @click="reset">Reset</button>
+        <div class="timer mt-3">
+          {{ timer }}
+        </div>
+        <div class="scoreboard mt-3">
+          <h2>Scoreboard</h2>
+          <div class="scores">
+            <div class="alert-info mt-2"
+                 v-for="(score, index) in sortedScores">{{index + 1}}. {{score.wpm}} WPM, {{score.typos}} Typos </div>
+          </div>
         </div>
       </div>
     </div>
