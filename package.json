@@ -1,0 +1,15 @@
+{
+  "name": "vuetyper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "start": "httpster"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "httpster": "^1.0.3"
+  }
+}
